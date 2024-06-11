@@ -26,44 +26,44 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "PRODUCT_ID")
+    @Column(name = "product_id")
     private Long id;
 
-    @Column(name = "FIN_PRDT_NM") // 상품명
+    @Column(name = "fin_prdt_nm") // 상품명
     private String productNm;
 
-    @Column(name = "MTRT_INT") // 만기 후 이자율
+    @Column(name = "mtrt_int") // 만기 후 이자율
     private String maturityInt;
 
-    @Column(name = "ETC_NOTE") // 기타 유의사항
+    @Column(name = "etc_note") // 기타 유의사항
     private String etcNote;
 
-    @Column(name = "MAX_LIMIT") // 최고한도
+    @Column(name = "max_limit") // 최고한도
     private String maxLimit;
 
-    @Column(name = "DCLS_STRT_DAY") // 공시 시작일
+    @Column(name = "dcls_strt_day") // 공시 시작일
     private Integer disclosureStartDay;
 
-    @Column(name = "DCLS_END_DAY") // 공시 종료일
+    @Column(name = "dcls_end_day") // 공시 종료일
     private String disclosureEndDay;
 
-    @Column(name = "INTR_RATE_TYPE_NM") // 저축 금리 유형명
+    @Column(name = "intr_rate_type_nm") // 저축 금리 유형명
     private String interestRateTypeNm;
 
-    @Column(name = "RSRV_TYPE_NM") // 적립 유형명
+    @Column(name = "rsrv_type_nm") // 적립 유형명
     private String reservesTypeNm;
 
-    @Column(name = "SAVE_TRM") // 저축 기간(개월)
+    @Column(name = "save_trm") // 저축 기간(개월)
     private BigDecimal savePeriod;
 
-    @Column(name = "INTR_RATE") // 저축 금리(소수점 2자리)
+    @Column(name = "intr_rate") // 저축 금리(소수점 2자리)
     private BigDecimal interestRate;
 
-    @Column(name = "INTR_RATE2") // 최고 우대금리(소수점 2자리)
+    @Column(name = "intr_rate2") // 최고 우대금리(소수점 2자리)
     private BigDecimal interestRate2;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "BANK_ID") // 은행
+    @JoinColumn(name = "bank_id") // 은행
     private Bank bank;
 
     @OneToMany(mappedBy = "product") // 관심상품

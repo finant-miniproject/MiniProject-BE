@@ -17,10 +17,10 @@ import lombok.extern.slf4j.Slf4j;
 public class RefreshToken {
 
     @Id
-    @Column(name = "REFRESH_TOKEN_EMAIL", nullable = false)
+    @Column(name = "refresh_token_email", nullable = false)
     private String email;
 
-    @Column(name = "REFRESH_TOKEN_TOKEN", nullable = false, columnDefinition = "text") // 토큰
+    @Column(name = "refresh_token", nullable = false, columnDefinition = "text") // 토큰
     private String token;
 
     @OneToOne(mappedBy = "refreshToken") // 회원

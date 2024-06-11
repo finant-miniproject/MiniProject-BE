@@ -22,16 +22,16 @@ import java.util.List;
 public class PurchaseList {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "PURCHASE_LIST_ID")
+    @Column(name = "purchase_list_id")
     private Long id;
 
-    @Column(name = "PURCHASE_LIST_DATE") // 구매 날짜
+    @Column(name = "purchase_list_date") // 구매 날짜
     private LocalDateTime purchaseListDate;
 
-    @Column(name = "PURCHASER") // 구매자
+    @Column(name = "purchaser") // 구매자
     private String purchaser;
 
-    @Column(name = "PURCHASER_PRODUCT") // 구매 상품
+    @Column(name = "purchase_product") // 구매 상품
     private String purchaseProduct;
 
     @OneToMany(mappedBy = "purchaseList") // 장바구니

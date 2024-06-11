@@ -24,16 +24,16 @@ public class Member {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "MEMBER_ID")
+    @Column(name = "member_id")
     private Long id;
 
-    @Column(name = "MEMBER_EMAIL", nullable = false) // 이메일
+    @Column(name = "member_email", nullable = false) // 이메일
     private String email;
 
-    @Column(name = "MEMBER_NAME", nullable = false) // 이름
+    @Column(name = "member_name", nullable = false) // 이름
     private String name;
 
-    @Column(name = "MEMBER_PASSWORD", nullable = false) // 비밀번호
+    @Column(name = "member_password", nullable = false) // 비밀번호
     private String password;
 
     @OneToMany(mappedBy = "member") // 관심상품
@@ -43,6 +43,6 @@ public class Member {
     private List<Cart> carts = new ArrayList<>();
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "REFRESH_TOKEN_EMAIL") // 토큰
+    @JoinColumn(name = "refresh_token_email") // 토큰
     private RefreshToken refreshToken;
 }

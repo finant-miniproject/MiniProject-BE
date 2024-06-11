@@ -21,19 +21,19 @@ public class WishList {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "WISH_LIST_ID")
+    @Column(name = "wish_list_id")
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "MEMBER_ID") // 회원
+    @JoinColumn(name = "member_id") // 회원
      private Member member;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "PRODUCT_ID") // 상품
+    @JoinColumn(name = "product_id") // 상품
     private Product product;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "LOAN_PRODUCT_ID") // 대출 상품
+    @JoinColumn(name = "loan_product_id") // 대출 상품
     private LoanProduct loanProduct;
 
 }

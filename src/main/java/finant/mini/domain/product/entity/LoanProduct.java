@@ -25,47 +25,47 @@ public class LoanProduct {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "LOAN_PRODUCT_ID")
+    @Column(name = "loan_product_id")
     private Long id;
 
-    @Column(name = "LOAN_FIN_PRDT_NM") // 상품명
+    @Column(name = "loan_fin_prdt_nm") // 상품명
     private String productNm;
 
-    @Column(name = "LOAN_INCI_EXPN") // 대출 부대비용
+    @Column(name = "loan_inci_expn") // 대출 부대비용
     private String incidentalExpense;
 
-    @Column(name = "LOAN_ERLY_RPAY_FEE") // 중도상환 수수료
+    @Column(name = "loan_erly_rpay_fee") // 중도상환 수수료
     private String earlyRepaymentFee;
 
-    @Column(name = "LOAN_DLY_RATE") // 연체 이자율
+    @Column(name = "loan_dly_rate") // 연체 이자율
     private String delayRate;
 
-    @Column(name = "LOAN_LMT") // 대출 한도
+    @Column(name = "loan_lmt") // 대출 한도
     private String loanLimit;
 
     @Column(name = "LOAN_DCLS_STRT_DAY") // 공시 시작일
     private Integer disclosureStartDay;
 
-    @Column(name = "LOAN_DCLS_END_DAY") // 공시 종료일
+    @Column(name = "loan_dcls_strt_day") // 공시 종료일
     private Integer disclosureEndDay;
 
-    @Column(name = "LOAN_RPAY_TYPE_NM") // 대출상환유형
+    @Column(name = "loan_rpay_type_nm") // 대출상환유형
     private String RepaymentTypeNm;
 
-    @Column(name = "LOAN_LEND_RATE_TYPE_NM") // 대출금리유형
+    @Column(name = "loan_lend_rate_type_nm") // 대출금리유형
     private String InterestRateTypeNm;
 
-    @Column(name = "LOAN_RATE_MIN") // 대출 금리_최저(소수점 2자리)
+    @Column(name = "loan_lend_rate_min") // 대출 금리_최저(소수점 2자리)
     private BigDecimal MinRate;
 
-    @Column(name = "LOAN_RATE_MAX") // 대출금리_최고(소수점 2자리)
+    @Column(name = "loan_lend_rate_max") // 대출금리_최고(소수점 2자리)
     private BigDecimal MaxRate;
 
-    @Column(name = "LEND_RATE_AVG") // 전원 취급 평균금리(소수점 2자리)
+    @Column(name = "loan_lend_rate_avg") // 전월 취급 평균금리(소수점 2자리)
     private BigDecimal RateAvg;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "BANK_ID") // 은행
+    @JoinColumn(name = "bank_id") // 은행
     private Bank bank;
 
     @OneToMany(mappedBy = "loanProduct") // 관심상품

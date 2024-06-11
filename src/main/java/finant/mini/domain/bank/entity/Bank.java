@@ -20,13 +20,13 @@ public class Bank {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "BANK_ID")
+    @Column(name = "bank_id")
     private Long id;
 
-    @Column(name = "BANK_NAME", nullable = false) // 은행명
+    @Column(name = "bank_name", nullable = false) // 은행명
     private String name;
 
-    @Column(name = "ICON_PATH", columnDefinition = "text") // 은행로고
+    @Column(name = "icon_path", columnDefinition = "text") // 은행로고
     private String imgPath;
 
     @OneToMany(mappedBy = "bank") // 상품
